@@ -22,6 +22,8 @@ var ConfirmBattleContainer = React.createClass({
 	console.log('componentDidMount');
 	githubHelpers.getPlayerInfo([query.playerOne, query.playerTwo])
 	.then(function (players) {
+	    console.log("made it to then");
+	    console.log('players: ' + players);
 	    this.setState({
 		isLoading: false,
 		playerInfo: [players[0], players[1]]
@@ -39,7 +41,7 @@ var ConfirmBattleContainer = React.createClass({
 	return (
 	    <ConfirmBattle 
 	        isLoading={this.state.isLoading}
-		playerInfo={this.state.playersInfo} />
+		playerInfo={this.state.playerInfo} />
 	);
     }
 });
