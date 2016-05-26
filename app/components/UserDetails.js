@@ -30,3 +30,5 @@ UserDetails.propTypes = {
 	public_repos: PropTypes.number.isRequired
     })
 }
+
+module.exports = UserDetails;
